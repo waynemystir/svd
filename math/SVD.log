@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  31 DEC 2017 21:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 JAN 2018 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1171,35 +1171,31 @@ Overfull \hbox (12.64474pt too wide) detected at line 1054
 T1/zplm/m/n/10 + [][] + [][]
  []
 
-[17]
-Overfull \hbox (13.38246pt too wide) detected at line 1162
-\OT1/zplm/m/n/10 = [] = []
- []
-
+[17] [18]
 
 Package bibentry Warning: You have used \nobibliography* 
 (bibentry)                without a following \bibliography.
 (bibentry)                You may not be able to run BibTeX.
 
-[18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1173.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1173.
+[19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1192.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1192.
  (./SVD.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1173.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1173.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1192.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1192.
 
 Package rerunfilecheck Info: File `SVD.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1173.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1192.
  ) 
 Here is how much of TeX's memory you used:
- 23244 strings out of 492995
- 403111 string characters out of 6132704
+ 23245 strings out of 492995
+ 403118 string characters out of 6132704
  490913 words of memory out of 5000000
  26282 multiletter control sequences out of 15000+600000
  74242 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,54p,956b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,54p,1009b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1216,10 +1212,10 @@ ts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
 palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri
 8a.pfb>
-Output written on SVD.pdf (18 pages, 251810 bytes).
+Output written on SVD.pdf (19 pages, 256800 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
+ 174 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
  1052 words of extra memory for PDF output out of 10000 (max. 10000000)
 
