@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 DEC 2017 22:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  31 DEC 2017 21:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1090,9 +1090,9 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 35.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 35.
+(Font)              scaled to size 8.99994pt on input line 23.
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
 (Font)              scaled to size 8.99994pt on input line 129.
  [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
@@ -1142,35 +1142,37 @@ Overfull \hbox (74.71866pt too wide) detected at line 586
 
 [9]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 710.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 712.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 710.
- [10] <svd-pic-01.png, id=69, 686.565pt x 459.7175pt>
+(Font)              scaled to size 8.99994pt on input line 712.
+ [10] <svd-pic-01.png, id=68, 686.565pt x 459.7175pt>
 File: svd-pic-01.png Graphic file (type png)
  <use svd-pic-01.png>
 Package pdftex.def Info: svd-pic-01.png used on input line 717.
 (pdftex.def)             Requested size: 285.8263pt x 191.38246pt.
 
-<svd-pic-02.png, id=71, 849.1725pt x 471.7625pt>
+<svd-pic-02.png, id=70, 849.1725pt x 471.7625pt>
 File: svd-pic-02.png Graphic file (type png)
  <use svd-pic-02.png>
 Package pdftex.def Info: svd-pic-02.png used on input line 725.
 (pdftex.def)             Requested size: 285.8263pt x 158.79185pt.
 
-<svd-pic-03.png, id=72, 889.3225pt x 487.8225pt>
+<svd-pic-03.png, id=71, 889.3225pt x 487.8225pt>
 File: svd-pic-03.png Graphic file (type png)
  <use svd-pic-03.png>
 Package pdftex.def Info: svd-pic-03.png used on input line 733.
 (pdftex.def)             Requested size: 285.8263pt x 156.78375pt.
- [11 <./svd-pic-01.png> <./svd-pic-02.png>] [12 <./svd-pic-03.png>] [13] [14]
-Overfull \hbox (12.64474pt too wide) detected at line 987
+ [11 <./svd-pic-01.png> <./svd-pic-02.png>] [12 <./svd-pic-03.png>] [13] [14] [
+15]
+[16]
+Overfull \hbox (12.64474pt too wide) detected at line 1054
 [][] \OT1/zplm/m/n/10 + [][] + \OT1/pplx/m/n/10 ... \OT1/zplm/m/n/10 + [][] + [
 ][] \OMS/zplm/m/n/10 ^^T [][] \OT1/zplm/m/n/10 + [][] + \OT1/pplx/m/n/10 ... \O
 T1/zplm/m/n/10 + [][] + [][]
  []
 
-[15] [16]
-Overfull \hbox (13.38246pt too wide) detected at line 1095
+[17]
+Overfull \hbox (13.38246pt too wide) detected at line 1162
 \OT1/zplm/m/n/10 = [] = []
  []
 
@@ -1179,25 +1181,25 @@ Package bibentry Warning: You have used \nobibliography*
 (bibentry)                without a following \bibliography.
 (bibentry)                You may not be able to run BibTeX.
 
-[17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1106.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1106.
+[18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1173.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1173.
  (./SVD.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1106.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1106.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1173.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1173.
 
 Package rerunfilecheck Info: File `SVD.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1106.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1173.
  ) 
 Here is how much of TeX's memory you used:
- 23241 strings out of 492995
- 403091 string characters out of 6132704
+ 23244 strings out of 492995
+ 403111 string characters out of 6132704
  490913 words of memory out of 5000000
  26282 multiletter control sequences out of 15000+600000
- 73088 words of font info for 148 fonts, out of 8000000 for 9000
+ 74242 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,54p,941b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,54p,956b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1214,10 +1216,10 @@ ts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
 palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri
 8a.pfb>
-Output written on SVD.pdf (17 pages, 244804 bytes).
+Output written on SVD.pdf (18 pages, 251810 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
+ 167 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
  1052 words of extra memory for PDF output out of 10000 (max. 10000000)
 

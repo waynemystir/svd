@@ -19,8 +19,8 @@
 \begin{document}
 
 \[\]
-{\Large\textbf{Definition 1: Diagonalization}}\\\leavevmode\\
-\noindent Suppose an n by n matrix $A$ has n linearly independent eigenvectors $\mathbf{x}_1$, $\mathbf{x}_2$, ..., $\mathbf{x}_n$. Put them into the columns of the eigenvector matrix $\mathbf{X}$. Then $\mathbf{\Lambda}\equiv\mathbf{X}^{-1}\mathbf{A}\mathbf{X}$ is the eigenvalue matrix. $A$ has been diagonalized.
+{\Large\textbf{Definition 1: Eigendecomposition \& Diagonalization}}\\\leavevmode\\
+\noindent Suppose an n by n matrix $A$ has n linearly independent eigenvectors $\mathbf{x}_1$, $\mathbf{x}_2$, ..., $\mathbf{x}_n$. Put them into the columns of the \textbf{eigenvector matrix} $\mathbf{X}$. Then $\mathbf{\Lambda}\equiv\mathbf{X}^{-1}\mathbf{A}\mathbf{X}$ is the \textbf{eigenvalue matrix}. $A$ has been \textbf{diagonalized}.
 \[
 \mathbf{\Lambda}\equiv\mathbf{X}^{-1}\mathbf{A}\mathbf{X}
 ~~~~~~~~~~~~
@@ -28,7 +28,7 @@
 ~~~~~~~~~~~~
 \mathbf{A}= \mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1}
 \]\\\leavevmode\\
-\noindent What does the eigenvalue matrix $\mathbf{\Lambda}$ look like? Why do we say $A$ has been "diagonalized"?\\\leavevmode
+\noindent $\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1}$ is called the \textbf{eigendecomposition} of $A$. But what does the eigenvalue matrix $\mathbf{\Lambda}$ look like? Why do we say $A$ has been "diagonalized"?\\\leavevmode
 
 \noindent{\Large\textbf{Lemma 1: Eigenvalue Matrix Is Diagonal With Eigenvalues In Diagonal}}\\\leavevmode\\
 \noindent Suppose an n by n matrix $A$ has n linearly independent eigenvectors $\mathbf{x}_1$, $\mathbf{x}_2$, ..., $\mathbf{x}_n$. Then the eigenvalue matrix $\mathbf{\Lambda}\equiv\mathbf{X}^{-1}\mathbf{A}\mathbf{X}$ is a diagonal matrix with the eigenvalues in the diagonal.\\\leavevmode\\
@@ -353,7 +353,7 @@ So $\mathbf{x}^T\mathbf{y}=0$.\quad\qedsymbol\\\leavevmode\\
 S=Q\Lambda Q^{T}=Q\Lambda Q^{-1}=\sum_{i=1}^{n}\lambda_i\mathbf{q}_i\mathbf{q}_i^T~~\text{and}~~Q^{-1}=Q^T
 \]\\\leavevmode\\
 \noindent\textbf{Proof:}\\
-\noindent Multiple proofs exist. $\Waynehref{https://brilliant.org/wiki/spectral-theorem/}{\text{Inductive Proof}}$. $\Waynehref{http://www.math.lsa.umich.edu/~speyer/417/SpectralTheorem.pdf}{\text{Straightforward Proof}}$.
+\noindent Many proofs exist. $\Waynehref{https://brilliant.org/wiki/spectral-theorem/}{\text{Inductive Proof}}$. $\Waynehref{http://www.math.lsa.umich.edu/~speyer/417/SpectralTheorem.pdf}{\text{Another Proof}}$. It is also possible to prove that you can get an orthonormal set of eigenvectors for any symmetric matrix, even for the case of repeated eigenvalues (basically apply Gram-Schmidt to the eigenspaces of repeated eigenvalues). So that's another proof. Later I will present another proof using the Rayleigh Quotient.
 
 \[\]
 {\Large\textbf{$\mathbf{A^TA}$ and $\mathbf{AA^T}$ Properties}}\\\leavevmode\\
@@ -707,11 +707,11 @@ AA^T\mathbf{u}_j=\Big(\sum_{i=1}^{r}\sigma_{i}^2\mathbf{u}_i\mathbf{u}_i^T\Big)\
 
 \noindent You can see why I called this proof the "all at once" proof. We got all the singular values and all the right singular vectors in one shot. \\\leavevmode\\
 
-\noindent There is a different way to look at SVD. This will lead to a restatement of SVD. It will also lead to the "one at a time" proof of SVD that I mentioned before. This approach, sometimes called the \textit{best least squares fit}, starts with a question: Say we have a set $X=\{\mathbf{x}_1, \mathbf{x}_2, ..., \mathbf{x}_m\}$ of $m$ vectors in $\mathbb{R}^n$. Can we find the best k-dimensional subspace $V$ of $\mathbb{R}^n$ with respect to this set of points? We define "best" to mean the shortest distance from $X$ to the subspace $V$. More specifically, we define "best" to mean the minimum sum of the squares of the perpendicular distances from the points in $X$ to the subspace $V$.\\\leavevmode\\
+\noindent There is a different way to look at SVD. This will lead to a restatement of SVD. It will also lead to the "one at a time" proof of SVD that I mentioned before. This approach, sometimes called the \textbf{best least squares fit}, starts with a question: Say we have a set $X=\{\mathbf{x}_1, \mathbf{x}_2, ..., \mathbf{x}_m\}$ of $m$ vectors in $\mathbb{R}^n$. Can we find the best k-dimensional subspace $V$ of $\mathbb{R}^n$ with respect to this set of points? We define "best" to mean the shortest distance from $X$ to the subspace $V$. More specifically, we define "best" to mean the minimum sum of the squares of the perpendicular distances from the points in $X$ to the subspace $V$.\\\leavevmode\\
 
-\noindent I know of at least two great resources that treat SVD as a \textit{best least squares fit} problem. One resource is a pair of blog posts by Jeremy Kun (\Waynehref{https://jeremykun.com/2016/04/18/singular-value-decomposition-part-1-perspectives-on-linear-algebra/}{SVD 1} and \Waynehref{https://jeremykun.com/2016/05/16/singular-value-decomposition-part-2-theorem-proof-algorithm/}{SVD 2}). I highly recommend both posts. He provides great intuition into a number of topics in these two posts. The other resource is \Waynehref{https://www.cs.princeton.edu/courses/archive/spring12/cos598C/svdchapter.pdf}{here}. But I'm sure there are other excellent treatments of SVD  as a \textit{best least squares fit} problem out there.\\\leavevmode\\
+\noindent I know of at least two great resources that treat SVD as a \textbf{best least squares fit} problem. One resource is a pair of blog posts by Jeremy Kun (\Waynehref{https://jeremykun.com/2016/04/18/singular-value-decomposition-part-1-perspectives-on-linear-algebra/}{SVD 1} and \Waynehref{https://jeremykun.com/2016/05/16/singular-value-decomposition-part-2-theorem-proof-algorithm/}{SVD 2}). I highly recommend both posts. He provides great intuition into a number of topics in these two posts. The other resource is \Waynehref{https://www.cs.princeton.edu/courses/archive/spring12/cos598C/svdchapter.pdf}{here}. But I'm sure there are other excellent treatments of SVD  as a \textit{best least squares fit} problem out there.\\\leavevmode\\
 
-\noindent OK, let's start with some simple pictures. Once we get the geometry, the best least squares idea of SVD and the "one at a time" proof follow very quickly. Let's say that $m=n=2$ and let's say $k=1$. So $X=\{\mathbf{x}_1, \mathbf{x}_2\}$ consists of two vectors in $\mathbb{R}^2$. For the moment, the pictured $V$ can be any line through the origin in $\mathbb{R}^2$. The pictured $V$ is not yet the "best-fit" line: \\\leavevmode\\
+\noindent OK, let's start with some simple pictures. Once we get the geometry, the best least squares fit approach to SVD and the "one at a time" proof follow very quickly. Let's say that $m=n=2$ and let's say $k=1$. So $X=\{\mathbf{x}_1, \mathbf{x}_2\}$ consists of two vectors in $\mathbb{R}^2$. For the moment, the pictured $V$ can be any line through the origin in $\mathbb{R}^2$. The pictured $V$ is not yet the "best-fit" line: \\\leavevmode\\
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{svd-pic-01}
@@ -825,7 +825,7 @@ Succintly, for a given $\mathbf{v_1}$, we have the Pythagorean Theorem:
 \norm{\mathbf{e_i}}^2+\norm{\mathbf{p_i}}^2
 =\norm{\mathbf{x_i}}^2
 \]
-Now remember that we haven't yet selected the subspace V nor its basis $\{\mathbf{v_1}\}$. The whole point of SVD is to find V such that we minimize the sum of the squares of the perpendicular distances from the points in X to the subspace V. In our simple pictures, the sum of the squares of the perpendicular distances is $\norm{\mathbf{e_1}}^2+\norm{\mathbf{e_2}}^2$:
+Now remember that we haven't yet selected the "best-fit" subspace V nor its basis $\{\mathbf{v_1}\}$. The objective is to find the "optimal" 1-dimensional V such that we minimize the sum of the squares of the perpendicular distances from the points in X to any 1-dimensional subspace. In our simple pictures, the sum of the squares of the perpendicular distances is $\norm{\mathbf{e_1}}^2+\norm{\mathbf{e_2}}^2$:
 \[
 \norm{\mathbf{e_1}}^2+\norm{\mathbf{e_2}}^2
 =
@@ -833,7 +833,7 @@ Now remember that we haven't yet selected the subspace V nor its basis $\{\mathb
 -
 \norm{\mathbf{p_1}}^2-\norm{\mathbf{p_2}}^2
 \]
-So how can we choose V and its basis $\{\mathbf{v_1}\}$ so as to minimize $\norm{\mathbf{e_1}}^2+\norm{\mathbf{e_2}}^2$? Well $\mathbf{x_1}$ and $\mathbf{x_2}$ are given and thus fixed. But $\mathbf{p_1} \equiv\frac{\mathbf{v_1}^T\mathbf{x_1}} {\mathbf{v_1}^T\mathbf{v_1}}\mathbf{v_1}$ and $\mathbf{p_2} \equiv\frac{\mathbf{v_1}^T\mathbf{x_2}} {\mathbf{v_1}^T\mathbf{v_1}}\mathbf{v_1}$ are dependent on $\mathbf{v_1}$, when we select $\mathbf{p_1}$ and $\mathbf{p_2}$ "correctly". Hence we can minimize the sum of the squares of the perpendicular distances by choosing $\mathbf{v_1}$ to maximize $\norm{\mathbf{p_1}}$ and $\norm{\mathbf{p_2}}$. That is, we have converted our original minimization problem into a maximization problem:
+So how can we choose V and its basis $\{\mathbf{v_1}\}$ so as to minimize $\norm{\mathbf{e_1}}^2+\norm{\mathbf{e_2}}^2$? Well $\mathbf{x_1}$ and $\mathbf{x_2}$ are given and thus fixed. But $\mathbf{p_1} \equiv\frac{\mathbf{v_1}^T\mathbf{x_1}} {\mathbf{v_1}^T\mathbf{v_1}}\mathbf{v_1}$ and $\mathbf{p_2} \equiv\frac{\mathbf{v_1}^T\mathbf{x_2}} {\mathbf{v_1}^T\mathbf{v_1}}\mathbf{v_1}$ are dependent on $\mathbf{v_1}$, when we select $\mathbf{p_1}$ and $\mathbf{p_2}$ "correctly". Hence we can minimize the sum of the squares of the perpendicular distances by choosing $\mathbf{v_1}$ to maximize $\norm{\mathbf{p_1}}^2+\norm{\mathbf{p_2}}^2$. More generally, we can minimize the sum of the squares of the perpendicular distances between $X$ and $V$ by maximizing the sum of the squared lengths of the projections of $X$ onto $V$. That is, we have converted our original minimization problem into a maximization problem:
 \[
 \mathbf{v_1}
 =
@@ -917,12 +917,12 @@ The last equation follows from the fact the squaring function is a monotonically
 
 \noindent Well just how are we supposed to do that? Maybe "one at a time"? But we must remember to select orthogonal $\mathbf{v_i}$'s:
 \[
-\mathbf{v_1}=\text{arg max}
+\mathbf{v_1}
 =
 \text{arg max}_{\mathbf{v}:\norm{\mathbf{v}}=1}\norm{A\mathbf{v}}
 \]
 \[
-\mathbf{v_2}=\text{arg max}
+\mathbf{v_2}
 =
 \text{arg max}_{\mathbf{v}\perp\mathbf{v_1},\norm{\mathbf{v}}=1}\norm{A\mathbf{v}}
 \]
@@ -939,9 +939,76 @@ For $\mathbf{v_2}$, you see that I added a second condition to the arg max funct
 \[
 \mathbf{u_i}\equiv\frac{A\mathbf{v_i}}{\sigma_{i}}
 \]
-And it is clear that the singular values are monotonically decreasing: $\sigma_{1}\geq\sigma_{2}\geq...\geq\sigma_{k-1}\geq\sigma_{k}$. This follows directly from our definition for each $\sigma_{i}$. There exists an $\Waynehref{http://codingthematrix.com/proof-that-U-is-column-orthogonal0.pdf}{\text{inductive proof}}$ that the $\mathbf{u}_i$'s are orthogonal. Is there no simpler proof? I have tried myself to derive a simpler proof without luck. I would be happy to hear if others have found such.\\\leavevmode\\
+It is clear that the singular values are monotonically decreasing: $\sigma_{1}\geq\sigma_{2}\geq...\geq\sigma_{k-1}\geq\sigma_{k}$. This follows directly from our definition for each $\sigma_{i}$. Notice that we specify $\norm{A\mathbf{v}}$ (without the square) for the defintion of $\sigma_{1}$ and $\sigma_{i}$, rather than $\norm{A\mathbf{v}}^2$. For the definition of $\mathbf{v_1}$ and $\mathbf{v_i}$, we can use $\norm{A\mathbf{v}}$ and $\norm{A\mathbf{v}}^2$ interchangeably. The monotonicity of the squaring function guarantees that the same $\mathbf{v_i}$ will satisfy both. But for the definition of the singular value $\sigma_{i}$, we specifically want $\norm{A\mathbf{v}}$, without the square. \\\leavevmode\\
 
-\noindent Now you might be asking, can we do this iterative step $n$ times? Well, as long as $\norm{A\mathbf{v}}>0$, then you will have $n$ positive singular values: $\sigma_{i}>0$ for $i=1,...,n$. And you will have an orthonormal basis $\{\mathbf{v_i},...,\mathbf{v_n}\}$ for $\mathbb{R}^n$.\\\leavevmode\\
+\noindent We these definitions, we can actually prove that our "one at a time" approach is equivalent to the "all at once" approach! Let's do that. If you wish to skip this and continue with the "one at a time approach", \hyperlink{btoaata}{\color{blue}{\text{click here}}}. First we define $r(\mathbf{x})=\frac{\mathbf{x}^TS\mathbf{x}}{\mathbf{x}^T\mathbf{x}}$ for a symmetric matrix $S$. This is called the Rayleigh Quotient and it comes in quite handy:\\\leavevmode\\
+
+\noindent{\Large\textbf{Lemma 4: Eigenvectors \& The Rayleigh Quotient}}\\\leavevmode\\
+\noindent Suppose $S$ is a symmtric matrix and let $r(\mathbf{x})=\frac{\mathbf{x}^TS\mathbf{x}}{\mathbf{x}^T\mathbf{x}}$. Then $\mathbf{x}\neq\mathbf{0}$ solves $\mathbf{0}=\nabla r(\mathbf{x})$ if and only if $\mathbf{x}$ is an eigenvector of $S$ with eigenvalue $r(\mathbf{x}$).\\\leavevmode\\
+
+\noindent \textbf{Proof}\\
+\noindent First we compute the partials:
+\[
+\frac{\partial r(\mathbf{x})}{\partial x_j}
+=
+\frac{\frac{\partial}{\partial x_j} \Big(\mathbf{x}^TS\mathbf{x}\Big)}{\mathbf{x}^T\mathbf{x}}
+-
+\frac{\Big(\mathbf{x}^TS\mathbf{x}\Big)\frac{\partial}{\partial x_j}\Big(\mathbf{x}^T\mathbf{x}\Big)}{(\mathbf{x}^T\mathbf{x})^2}
+\]
+\[
+=
+\frac{2(S\mathbf{x})_j}{\mathbf{x}^T\mathbf{x}}
+-
+\frac{(\mathbf{x}^TS\mathbf{x})2x_j}{(\mathbf{x}^T\mathbf{x})^2}
+\]
+\[
+=
+\frac{2}{\mathbf{x}^T\mathbf{x}}
+(S\mathbf{x}-r(\mathbf{x})\mathbf{x})_j
+\]
+So our gradient is $\nabla r(\mathbf{x})=\frac{2}{\mathbf{x}^T\mathbf{x}}(S\mathbf{x}-r(\mathbf{x})\mathbf{x})$ and we find that
+\[
+\mathbf{0}=
+\nabla r(\mathbf{x})=\frac{2}{\mathbf{x}^T\mathbf{x}}(S\mathbf{x}-r(\mathbf{x})\mathbf{x})
+\]
+\[
+\iff
+\mathbf{0}
+=
+S\mathbf{x}-r(\mathbf{x})\mathbf{x}
+\]
+\[
+\iff
+S\mathbf{x}=r(\mathbf{x})\mathbf{x}
+\]
+\qedsymbol\\\leavevmode\\
+
+\noindent This lemma tells us is that the stationary points of $r(\mathbf{x})=\frac{\mathbf{x}^TS\mathbf{x}}{\mathbf{x}^T\mathbf{x}}$ are eigenvectors for $S$ with eigenvalues equal to $r(\mathbf{x})$ at those points. Hence we can set $S=A^TA$ and get the largest eigenvalue by computing $\lambda_1=\text{max}_\mathbf{x}r(\mathbf{x})=\text{max}_\mathbf{x}\frac{\mathbf{x}^TA^TA\mathbf{x}}{\mathbf{x}^T\mathbf{x}}=\text{max}_\mathbf{x}\frac{\norm{A\mathbf{x}}^2}{\norm{\mathbf{x}}^2}$ and
+
+\[
+\lambda_1=
+\text{max}_{\mathbf{v}:\norm{\mathbf{v}}=1}\norm{A\mathbf{v}}^2=\sigma_{1}^2
+\]
+\[
+\mathbf{v_1}=
+\text{arg max}_{\mathbf{v}:\norm{\mathbf{v}}=1}\norm{A\mathbf{v}}^2
+\]
+So $\lambda_1=\sigma_{1}^2$ is the largest eigenvalue of $A^TA$ with corresponding eigenvector $\mathbf{v_1}$. Of course these are the same values we computed above to maximize the sum of the squared lengths of the projections of $X$ onto $V$. Similarly, lemma 4 says that
+\[
+\lambda_i=
+\text{max}_{\mathbf{v}\in\text{span}(\mathbf{v_1},...,\mathbf{v_{i-1}})^\perp,\norm{\mathbf{v}}=1}\norm{A\mathbf{v}}^2=\sigma_{i}^2
+\]
+\[
+\mathbf{v_i}=
+\text{arg max}_{\mathbf{v}\in\text{span}(\mathbf{v_1},...,\mathbf{v_{i-1}})^\perp,\norm{\mathbf{v}}=1}\norm{A\mathbf{v}}^2
+\]
+\noindent is the i$^{\text{th}}$ largest eigenpair for $A^TA$ since $\mathbf{v_i}$ is a stationary point of $r(\mathbf{x})$.\\\leavevmode\\
+
+\noindent So how does this show that the "all at once" approach is equivalent to this "one at a time" approach? Well, in the first few lines of that proof, we picked the right singular vectors to be orthonormal eigenvectors of $A^TA$. And we defined the singulars values to be the square roots of the corresponding eigenvalues. Everything else in the proof follows from that. But now we have shown than the $\mathbf{v_i}$'s and $\sigma_{i}^2$'s defined to maximize the sum of the squared lengths of the projections of $X$ onto $V$ are in fact orthonormal eigenpairs for $A^TA$. Hence equivalency.\\\leavevmode\\
+
+\noindent Incidentally, this leads directly to another proof of the Spectral Theorem. By iteratively computing the $\lambda_i$'s and orthonormal $\mathbf{v_i}$'s for any given symmetric matrix $S$ using the max, argmax of the Rayleigh Quotient, we are also computing $S=\sum_{i=1}^n\lambda_i\mathbf{v_i}\mathbf{v_i}^T=V\Lambda V^T$.\\\leavevmode\\
+
+\noindent \hypertarget{btoaata}{\text{OK, back to our "one at a time" approach.}} Now you might be asking, can we do this iterative step $n$ times? Well, as long as $\norm{A\mathbf{v}}>0$, then you will have $n$ positive singular values: $\sigma_{i}>0$ for $i=1,...,n$. And you will have an orthonormal basis $\{\mathbf{v_i},...,\mathbf{v_n}\}$ for $\mathbb{R}^n$. As we proved in the "all at once" proof, $A$ has rank $n$.\\\leavevmode\\
 
 \noindent But what happens when $\sigma_{k}>0$ but $\sigma_{k+1}=0$ for some $k<n$? This must mean that the rank of $A$ is $k$. Let's see why that must be the case. Here's what we have: For any $j>k$, any $\mathbf{v_{j}}$ satisfying $\mathbf{v_{j}}\perp \mathbf{v_i}$ for all $i=1,...,k$ must also satisfy $\norm{A\mathbf{v_{j}}}= \sigma_{j}=0$. Such $\mathbf{v_{j}}$'s must also satisfy $A\mathbf{v_{j}}=\mathbf{0}$. That is, the only remaining $\mathbf{v_{j}}$'s that are orthogonal to all $\{\mathbf{v_1},...,\mathbf{v_k}\}$ must be in the nullspace of $A$. Since the dimension of $\mathbb{R}^n$ is $n$, surely we can select $n-k$ such $\mathbf{v_{j}}$'s. Said another way, we can extend $\{\mathbf{v_1},...,\mathbf{v_k}\}$ to an orthonormal basis for $\mathbb{R}^n$ but only with $\mathbf{v_{j}}$'s that are in the nullspace of $A$. Hence the nullspace of $A$ has dimension $n-k$ and hence $A$ has rank $k$.\\\leavevmode\\
 
