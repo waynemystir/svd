@@ -465,9 +465,9 @@ A similar argument works for $AA^T$.\quad\qedsymbol
 \text{$\circled{3}$ ~The first $r$ elements of the diagonal of $\Sigma$ are square roots of eigenvalues of $A^TA$ (and equivalently $AA^T$).}\\
 \text{$\circled{4}$ ~The remaining $m-r$ columns of $U$ form an orthonormal basis for the left nullspace of $A$.}\\
 \text{$\circled{5}$ ~The remaining $n-r$ columns of $V$ form an orthonormal basis for the nullspace of $A$.}\\
-\text{$\circled{6}$ ~$A=U\Sigma V^T$ separates $A$ into rank 1 matrices $\sum_{i=1}^{r}\sigma_{i}\mathbf{u}_i\mathbf{v}_i^T$.}\\
-\text{$\circled{7}$ ~$A^TA=\sum_{i=1}^{r}\sigma_{i}^2\mathbf{v}_i\mathbf{v}_i^T$  and the right singular vectors are eigenvectors of $A^TA$ with eigenvalues $\sigma_{i}^2=\lambda_i$.}\\
-\text{$\circled{8}$ ~$AA^T=\sum_{i=1}^{r}\sigma_{i}^2\mathbf{u}_i\mathbf{u}_i^T$  and the left singular vectors are eigenvectors of $AA^T$ with eigenvalues $\sigma_{i}^2=\lambda_i$.}\\
+\text{$\circled{6}$ ~$A=U\Sigma V^T$ separates $A$ into $r$ rank 1 matrices $\sum_{i=1}^{r}\sigma_{i}\mathbf{u}_i\mathbf{v}_i^T$.}\\
+\text{$\circled{7}$ ~$A^TA=\sum_{i=1}^{r}\sigma_{i}^2\mathbf{v}_i\mathbf{v}_i^T$  and the right singular vectors of $A$ are eigenvectors of $A^TA$ with eigenvalues $\sigma_{i}^2=\lambda_i$.}\\
+\text{$\circled{8}$ ~$AA^T=\sum_{i=1}^{r}\sigma_{i}^2\mathbf{u}_i\mathbf{u}_i^T$  and the left singular vectors of $A$ are eigenvectors of $AA^T$ with eigenvalues $\sigma_{i}^2=\lambda_i$.}\\
 \text{$\circled{9}$ ~The columns of $U$ form an orthonormal basis for $\mathbb{R}^m$.}\\
 \text{$\circled{10}$ ~The columns of $V$ form an orthonormal basis for $\mathbb{R}^n$.}\\\leavevmode\\
 
@@ -1062,7 +1062,12 @@ proving that $V_k$ is at least as good as $W$ and hence is optimal.\quad\qedsymb
 \lim_{s\rightarrow\infty}\frac{(A^TA)^s\mathbf{x}}{\norm{(A^TA)^s\mathbf{x}}}
 =\mathbf{v_1}~~~~\text{if and only if }\sigma_{1}>\sigma_{2}
 \]
-where $\mathbf{v_1}$ is the first right singular vector and $\sigma_{1}$ and $\sigma_{2}$ are the first and second singular values of $A$.\\\leavevmode\\
+and
+\[
+\lim_{s\rightarrow\infty}\frac{(AA^T)^s\mathbf{x}}{\norm{(AA^T)^s\mathbf{x}}}
+=\mathbf{u_1}~~~~\text{if and only if }\sigma_{1}>\sigma_{2}
+\]
+where $\mathbf{v_1}$ is the top right singular vector, $\mathbf{u_1}$ is the top left singular vector, and $\sigma_{1}$ and $\sigma_{2}$ are the first and second singular values of $A$.\\\leavevmode\\
 \noindent{\textbf{Proof}}\\\leavevmode\\
 
 \noindent First we need to find a convenient formula for $(A^TA)^s$. Suppose $A$ has rank $r$ and orthonormal right singular vectors $\mathbf{v_1},...,\mathbf{v_n}$. Then 
@@ -1177,7 +1182,8 @@ And putting it together:
 \lim_{s\rightarrow\infty}\sum_{i=1}^r\frac{c_i\sigma_{i}^{2s}}{\sqrt{\sum_{j=1}^rc_j^2\sigma_{j}^{4s}}}\mathbf{v_i}
 =\mathbf{v_1}~~~~\text{so long as }\sigma_{1}>\sigma_{2}
 \]
-\qedsymbol\\\leavevmode\\
+The proof for $\lim_{s\rightarrow\infty}\frac{(AA^T)^s\mathbf{x}}{\norm{(AA^T)^s\mathbf{x}}}
+=\mathbf{u_1}~\text{if and only if }\sigma_{1}>\sigma_{2}$ is similar.\quad\qedsymbol\\\leavevmode\\
 \noindent Of course, once we have numerically computed $\mathbf{v_1}$, we can use the Rayleigh Quotient to get the corresponding eigenvalue of $A^TA$ which is also the square of the singular value of $A$: $\sigma_{1}^2=\lambda_1=r(\mathbf{v_1})=\frac{\mathbf{v_1
 }^TA^TA\mathbf{v_1}}{\mathbf{v_1}^T\mathbf{v_1}}=\mathbf{v_1
 }^TA^TA\mathbf{v_1}=(A\mathbf{v_1})^TA\mathbf{v_1}=\mathbf{u_1}^T\mathbf{u_1}$. And then we can normalize $\mathbf{u_1}$ to finish off the first pair of singular vectors.\\\leavevmode\\
