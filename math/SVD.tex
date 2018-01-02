@@ -1062,7 +1062,7 @@ proving that $V_k$ is at least as good as $W$ and hence is optimal.\quad\qedsymb
 \lim_{s\rightarrow\infty}\frac{(A^TA)^s\mathbf{x}}{\norm{(A^TA)^s\mathbf{x}}}
 =\mathbf{v_1}~~~~\text{if and only if }\sigma_{1}>\sigma_{2}
 \]
-where $\mathbf{v_1}$ is the first right singular vector and $\sigma_{1}$ and $\sigma_{2}$ are the first and second singular values.\\\leavevmode\\
+where $\mathbf{v_1}$ is the first right singular vector and $\sigma_{1}$ and $\sigma_{2}$ are the first and second singular values of $A$.\\\leavevmode\\
 \noindent{\textbf{Proof}}\\\leavevmode\\
 
 \noindent First we need to find a convenient formula for $(A^TA)^s$. Suppose $A$ has rank $r$ and orthonormal right singular vectors $\mathbf{v_1},...,\mathbf{v_n}$. Then 
@@ -1178,7 +1178,7 @@ And putting it together:
 =\mathbf{v_1}~~~~\text{so long as }\sigma_{1}>\sigma_{2}
 \]
 \qedsymbol\\\leavevmode\\
-\noindent Of course, once we have numerically computed $\mathbf{v_1}$, we can use the Rayleigh Quotient to get the corresponding eigenvalue or singular value: $\lambda_1=\sigma_{1}^2=r(\mathbf{v_1})=\frac{\mathbf{v_1
+\noindent Of course, once we have numerically computed $\mathbf{v_1}$, we can use the Rayleigh Quotient to get the corresponding eigenvalue of $A^TA$ which is also the square of the singular value of $A$: $\sigma_{1}^2=\lambda_1=r(\mathbf{v_1})=\frac{\mathbf{v_1
 }^TA^TA\mathbf{v_1}}{\mathbf{v_1}^T\mathbf{v_1}}=\mathbf{v_1
 }^TA^TA\mathbf{v_1}=(A\mathbf{v_1})^TA\mathbf{v_1}=\mathbf{u_1}^T\mathbf{u_1}$. And then we can normalize $\mathbf{u_1}$ to finish off the first pair of singular vectors.\\\leavevmode\\
 
@@ -1187,6 +1187,6 @@ repeat this procedure for $A-\sigma_{1}\mathbf{u_1}\mathbf{v_1}^T$. The top sing
 
 \noindent So the question becomes, how quickly does $\frac{(A^TA)^s\mathbf{x}}{\norm{(A^TA)^s\mathbf{x}}}$ converge to $\mathbf{v_1}$? Well, the Power Method isn't industrial strength, but it's still pretty good. You can find a \Waynehref{https://en.wikipedia.org/wiki/Power_iteration\#Analysis}{\text{detailed analysis here}} or \Waynehref{http://www.cs.yale.edu/homes/el327/datamining2013aFiles/07_singular_value_decomposition.pdf}{\text{at the end this}}. It turns out that the convergence is geometric with ratio $\frac{\lambda_2}{\lambda_1}$.\\\leavevmode\\
 
-\noindent When we actually code this up, instead of iterating a calculated number of times, we will simply stop iterating when the angle between iteration results is sufficiently small. What does that mean? Let $\mathbf{t_s}=\frac{(A^TA)^s\mathbf{x}}{\norm{(A^TA)^s\mathbf{x}}}$. Then $\mathbf{t_s}$ is a unit vector. So the $cos$ of the angle $\theta$ between $\mathbf{t_s}$ and $\mathbf{t_{s-1}}$ can be computed as $cos(\theta)=\frac{\mathbf{t_s}\cdot\mathbf{t_{s-1}}}{\norm{\mathbf{t_s}}\norm{\mathbf{t_{s-1}}}}=\mathbf{t_s}\cdot\mathbf{t_{s-1}}$. We know that $\text{lim}_{\theta\rightarrow0}cos(\theta)=1$ and that $cos(\theta)\leq1$ for all $\theta$. At each iteration $s$, we check whether $\vert\mathbf{t_s}\cdot\mathbf{t_{s-1}}\vert>1-\epsilon$ for some arbitrarily small $\epsilon$. When this check is true for some iteration $s$, we have a sufficiently small angle between iteration results and $\mathbf{t_s}$ is a pretty good approximation for $\mathbf{v_i}$. So we stop.
+\noindent When we actually code this up, instead of iterating a calculated number of times, we will simply stop iterating when the angle between iteration results is sufficiently small. What does that mean? Let $\mathbf{t_s}=\frac{(A^TA)^s\mathbf{x}}{\norm{(A^TA)^s\mathbf{x}}}$. Then $\mathbf{t_s}$ is a unit vector. So the $cos$ of the angle $\theta$ between $\mathbf{t_s}$ and $\mathbf{t_{s-1}}$ can be computed as $cos(\theta)=\frac{\mathbf{t_s}\cdot\mathbf{t_{s-1}}}{\norm{\mathbf{t_s}}\norm{\mathbf{t_{s-1}}}}=\mathbf{t_s}\cdot\mathbf{t_{s-1}}$. We know that $\text{lim}_{\theta\rightarrow0}cos(\theta)=1$ and that $cos(\theta)\leq1$ for all $\theta$. At each iteration $s$, we check whether $\mathbf{t_s}\cdot\mathbf{t_{s-1}}>1-\epsilon$ for some arbitrarily small $\epsilon$. When this check is true for some iteration $s$, we have a sufficiently small angle between iteration results and we're not going to get a much better approximation for $\mathbf{v_i}$ than $\mathbf{t_s}$. So we stop.
 
 \end{document}
